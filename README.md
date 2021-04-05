@@ -117,7 +117,7 @@ All teammates participated in the sprint review and discussed plans as a team. I
 
 
 
-# Sprint Planning 5: (G3 A — Nav Bar, Fav Page, Backend)
+# Sprint Planning 5: (G2 A — Nav Bar, Fav Page, Backend)
 Backend:
 1. Meeting with Dharmesh and Rohit (set up account on AWS and created table to store info, discuss integration).
 2. Research on integration
@@ -158,3 +158,42 @@ Front end team did an awesome job on expanding the scope by creating almost most
 All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
 Improvements and feedbacks from the team: Development progress running smoothly this week. A potential question on the functionality of settings page is brought up by one developer and we will discuss it in the next week’s sprint planning meeting. Also the icons for list view will be updated next week. Only select a few buildings on campus that are popular to implement functionality on.
 
+s
+# Sprint Planning 6: (G2 B — Fav Page CSS, Backend)
+Backend:
+1. Meeting with Rohit (get help for aws rds and how to implement lambda function).
+
+Frontend:
+1. Design update and usability tests (UXD).
+2. Reconstructed the api part in the backend; researching to migrate the apis to aws lambda.
+3. Working on favorites page, created new json file (building names addresses)
+
+Rationale: We plan to mainly focus on starting G2 B, working on favorites data and css implementation. For backend, we reconstructed the api calls and added a few more functions that are useful for our frontend. Our frontend plan is to keep working on the favorites page css and the navbar and adjust the design according to the feedback from last week’s sprint discussion (floor density, sorting tab)
+
+
+# Daily Scrum (03/30)
+John Chai: Researched and learned about lambda functions on aws, meet with Rohit to checkout the current design; will focus on sending the css file to the rds db.
+
+Preksha Munot: Keep working on the css of fav page based on the feedback from the last week; will start working on perfecting the updated css.
+
+Evan Hsu: Reconstructed the current api system and testing of the newly implemented api endpoints; will work on the migration using aws lambda.
+
+Tilak Agarwal: Work on the setting’s page and css; will start working on perfecting the updated css.
+
+Katie So: Updated the current figma design and the design brief; keep updating the design and communication with development teams.
+
+
+Scrum Evaluation:
+For this week's scrum, as usual we distributed the tasks according to the team and work together in the zoom call. We accomplished most tasks we set for the day and made progress on both teams. The impediments we discovered this week is that we are encountering a learning curve for backend. An impediment is to reach out to mentors for help and do more research and learning.
+
+Mob-Programming: the evidence can be found in the drive Week 10 folder during the daily scrum.
+
+Test-Driven Development: Backend developers are able to meet testing using postman for up to date apis (floor density) the evidences can be found in Week 10 folder by screenshots.
+
+# Sprint Review 6
+Front end team kept working on the css of the fav page and setting page; encountered some difficulty on figuring out the css for the settings part. Backend team worked on creating more api calls and try to migrate the data from the local server to the rds db. In general the development process is moving smoothly; we lacks a little bit of development progress this week due to the fact that we also need to work on the presentation and other heavy courseload but will catch up next week. For stakeholder, we introduced a former user we did survey on and updated him with our progress. We obtained some feedback on the design and discussed in our meeting.
+
+
+# Sprint Retrospective
+All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
+Improvements and feedbacks from the team: Bit behind on some development goals. A few adjustments on the user story is brought up by some teammates and will discuss with mentors to figure out the best practice for the final demo day. A potential concern brought up by one of our mentors is the BU authentication page and will be recorded in our sprint planning next week.
