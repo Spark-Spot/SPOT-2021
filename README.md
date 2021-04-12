@@ -197,3 +197,45 @@ Front end team kept working on the css of the fav page and setting page; encount
 # Sprint Retrospective
 All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
 Improvements and feedbacks from the team: Bit behind on some development goals. A few adjustments on the user story is brought up by some teammates and will discuss with mentors to figure out the best practice for the final demo day. A potential concern brought up by one of our mentors is the BU authentication page and will be recorded in our sprint planning next week.
+
+# Sprint Planning 7: (G3 A — star rating start and fixing of functionality of G1-G2)
+Backend:
+1. Migrate the data to aws rds to store safe copy.
+2. Start on the integration with Swift and try to make endpoint connect.
+3. Improved api calls and change the formate of json.
+
+Frontend:
+1. Design update and usability tests (UXD).
+2. Finished the css for setting page and favorite page.
+3. Update the navbar base on the newly updated design.
+
+Rationale: We plan to mainly focus on finishing G3 A and cleaning up from previous user story works in order to take consideration into the final demo day, working on css implementation for 2 main pages. For backend, we start integrating the frontend with the backend and also preserved a safe copy of our existing data. Our frontend plan is to update the css and structures base on the design update and clean up the bugs from the previous sprints.
+
+
+# Daily Scrum (04/09)
+John Chai: Migrate the data to the aws rds, learn to connect node with swift; will keep working on the integration and set up a meeting with frontend team to work on it together.
+
+Preksha Munot: Implemented css for the favorite page; will start working on sorting tab.
+
+Evan Hsu: Improved and adjusted the api callback to help the frontend team to easily use the data as json format. will work on the BU authentication.
+
+Tilak Agarwal: Implemented css for the settings page and nabber fix based on the updated design; will start working on profile edit and star rating.
+
+Katie So: Updated the current figma design and the design brief; keep updating the design and communication with development teams.
+
+
+Scrum Evaluation:
+For this week's scrum, as usual we distributed the tasks according to the team and work together in the zoom call. We accomplished most tasks we set for the day and made progress on both teams. The impediments we discovered this week is that we are encountering a schedule conflict that require both frontend backend team to participate on coding. An impediment is resolved by scheduling one this week for integration.
+
+Mob-Programming: the evidence can be found in the drive Week 11 folder during the daily scrum.
+
+Test-Driven Development: api fix and update as well as the data migration to the aws. the evidence can be found in Week 11 folder by screenshots.
+
+
+# Sprint Review 7
+For backend team we integrated the frontend with the backend and also preserved a safe copy of our existing data. Our frontend accomplished to update the css and structures base on the design update and clean up the bugs from the previous sprints. In general the development process is moving smoothly and each team accomplished what was set at the beginning of the week. For stakeholder, we introduced a former user we did survey on and updated her with our progress. We obtained some feedback on the design and updated the design.
+
+
+# Sprint Retrospective
+All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
+Improvements and feedbacks from the team: Need to meet together and finalize integration. A potential concern brought up by one of our mentors is the deliberation and we adjusted our user story accordingly to the feedback.
