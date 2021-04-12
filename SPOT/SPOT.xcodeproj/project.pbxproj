@@ -14,7 +14,7 @@
 		9ED1C6B125FF063500482C1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED1C6B025FF063500482C1A /* Preview Assets.xcassets */; };
 		9ED1C6BD25FF066500482C1A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1C6BC25FF066500482C1A /* LoginView.swift */; };
 		9EE8BFED2611084C00930CD1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8BFEC2611084C00930CD1 /* Settings.swift */; };
-		9EE9DB1326122BF7003E0A88 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9DB1226122BF7003E0A88 /* Favorites.swift */; };
+		9EE8F76C261B784400BE6542 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8F76B261B784400BE6542 /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		9ED1C6B225FF063500482C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ED1C6BC25FF066500482C1A /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9EE8BFEC2611084C00930CD1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		9EE9DB1226122BF7003E0A88 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		9EE8F76B261B784400BE6542 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorites.swift; path = ../../../../../../../../Downloads/Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				9EE8BFEC2611084C00930CD1 /* Settings.swift */,
 				9ED1C6A925FF063200482C1A /* SPOTApp.swift */,
 				9ED1C6AB25FF063200482C1A /* ContentView.swift */,
-				9EE9DB1226122BF7003E0A88 /* Favorites.swift */,
+				9EE8F76B261B784400BE6542 /* Favorites.swift */,
 				9ED1C6AD25FF063500482C1A /* Assets.xcassets */,
 				9ED1C6B225FF063500482C1A /* Info.plist */,
 				9ED1C6AF25FF063500482C1A /* Preview Content */,
@@ -153,7 +153,7 @@
 				9E46D9882609072800F8E770 /* ListUIView.swift in Sources */,
 				9ED1C6AC25FF063200482C1A /* ContentView.swift in Sources */,
 				9ED1C6BD25FF066500482C1A /* LoginView.swift in Sources */,
-				9EE9DB1326122BF7003E0A88 /* Favorites.swift in Sources */,
+				9EE8F76C261B784400BE6542 /* Favorites.swift in Sources */,
 				9ED1C6AA25FF063200482C1A /* SPOTApp.swift in Sources */,
 				9EE8BFED2611084C00930CD1 /* Settings.swift in Sources */,
 			);

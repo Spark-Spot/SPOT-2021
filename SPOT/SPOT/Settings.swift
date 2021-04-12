@@ -11,8 +11,7 @@ struct Settings: View {
     var body: some View {
         
         NavigationView {
-            VStack{
-                Spacer()
+            VStack(alignment: .leading){
                 HStack{
                     Spacer()
                     Text("My Settings").font(.custom("Cabin Bold", size: 30))
@@ -27,27 +26,50 @@ struct Settings: View {
                 }
                 Spacer()
                 NavigationLink(destination: LoginView()) {
-                                Text("Logout")
-                                    .padding()
+                                Text("ACCOUNT")
                                     .foregroundColor(.red)
                                     .background(Color.white)
+                                    .padding(.leading, 40)
                                     .cornerRadius(5)
                                     
-                }.frame(width: 150, height: 60)
+                }.padding()
                 NavigationLink(destination: LoginView()) {
-                                Text("Send Feedback")
-                                    .padding()
+                                Text("Edit Profile")
+                                    .foregroundColor(.black)
+                                    .background(Color.white)
+                                    .padding(.leading, 40)
+                                    .cornerRadius(5)
+                }.padding()
+                NavigationLink(destination: LoginView()) {
+                                Text("Logout")
+                                    .foregroundColor(.black)
+                                    .background(Color.white)
+                                    .padding(.leading, 40)
+                                    .cornerRadius(5)
+                                    
+                }.padding()
+                Spacer()
+                NavigationLink(destination: LoginView()) {
+                                Text("SUPPORT")
                                     .foregroundColor(.red)
                                     .background(Color.white)
+                                    .padding(.leading, 40)
                                     .cornerRadius(5)
-                }.frame(width: 250, height: 60)
+                }.padding()
                 NavigationLink(destination: LoginView()) {
                                 Text("About")
-                                    .padding()
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.black)
                                     .background(Color.white)
+                                    .padding(.leading, 40)
                                     .cornerRadius(5)
-                }.frame(width: 150, height: 60)
+                }.padding()
+                NavigationLink(destination: LoginView()) {
+                                Text("Send Feedback")
+                                    .foregroundColor(.black)
+                                    .background(Color.white)
+                                    .padding(.leading, 40)
+                                    .cornerRadius(5)
+                }.padding()
                 Spacer()
             }
         }
