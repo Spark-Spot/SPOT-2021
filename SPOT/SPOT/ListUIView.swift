@@ -6,9 +6,17 @@
 //
 
 import SwiftUI
+import UIKit
 
-struct ListUIView: View {
+protocol DataDelegate {
+    func updateArray(newArray: String)
+}
+
+struct ListUIView: View, UITableViewDelegate, ListUIView_DataSource {
     @State var text: String
+    @IBOutlet weak var notesTableView: UITableView!
+    var notesArray = [Note]()
+
     var body: some View {
         ScrollView{
         VStack{
@@ -132,10 +140,30 @@ struct ListUIView: View {
         }
         }
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        notesTableView.delegate = self
+        notesTableView.dataSourse = self
+        APIFunctions.functions.delegate = self
+        APIFunctions.functions.fetchBuildinginfo()
+        print(notesArray)
+
+    }
 }
 
 struct ListUIView_Previews: PreviewProvider {
     static var previews: some View {
         ListUIView(text: "")
+    }
+}
+
+extension ListUIView_Previews: DataDelegate {
+    func updateArray(newArray: String){
+        do {
+            notesArray = JSONDecoder().decode([Note].self, from: newArray.data(using: .utf8)!)
+        } catch{
+            print("Failed to decode")
+        }
+        self.notesTableView?.reloadData()
     }
 }
