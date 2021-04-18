@@ -9,13 +9,13 @@ import SwiftUI
 import UIKit
 
 protocol DataDelegate {
-    func updateArray(newArray: String)
+    func updateArray(newArray: Any)
 }
 
-struct ListUIView: View, UITableViewDelegate, ListUIView_DataSource {
+struct ListUIView: View{
     @State var text: String
-    @IBOutlet weak var notesTableView: UITableView!
-    var notesArray = [Note]()
+    @IBOutlet weak var ListUIView: UITableView!
+    var notesArray = [Building]()
 
     var body: some View {
         ScrollView{
@@ -140,12 +140,12 @@ struct ListUIView: View, UITableViewDelegate, ListUIView_DataSource {
         }
         }
     }
-    override func viewDidLoad() {
+    func viewDidLoad() {
         super.viewDidLoad()
         notesTableView.delegate = self
         notesTableView.dataSourse = self
         APIFunctions.functions.delegate = self
-        APIFunctions.functions.fetchBuildinginfo()
+        APIFunctions.functions.fetchBuildingInfo("561")
         print(notesArray)
 
     }
@@ -160,7 +160,7 @@ struct ListUIView_Previews: PreviewProvider {
 extension ListUIView_Previews: DataDelegate {
     func updateArray(newArray: String){
         do {
-            notesArray = JSONDecoder().decode([Note].self, from: newArray.data(using: .utf8)!)
+            notesArray = JSONDecoder().decode([Building].self, from: newArray.data(using: .utf8)!)
         } catch{
             print("Failed to decode")
         }
