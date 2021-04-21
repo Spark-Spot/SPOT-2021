@@ -239,3 +239,31 @@ For backend team we integrated the frontend with the backend and also preserved 
 # Sprint Retrospective
 All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
 Improvements and feedbacks from the team: Need to meet together and finalize integration. A potential concern brought up by one of our mentors is the deliberation and we adjusted our user story accordingly to the feedback.
+
+
+# Sprint Planning 8: (G3 A — star rating, backend deployment and integration)
+Backend:
+1. Deployed the backend node app to heroku.
+2. Parse data to frontend through deployed backend.
+3. Improved api calls and adjust data format base on frontend design.
+Frontend:
+1. Design update and usability tests (UXD).
+2. Sorting tab done
+3. Floor view done
+Rationale: We plan to mainly focus on finishing the integration and deployment process as demo day is approaching, working on css implementation for 2 main pages. For backend, plan to meet with frontend team to finalize data format and deployment. Our frontend plan is to update the sorting tab and other functionalities base on the new design.
+
+# Daily Scrum (04/18)
+John Chai: figured out to deploy backend server to heroku; will keep working frontend data parsing using UISession in swift.
+Preksha Munot: Working with backend team to parse the data with json format, will keep working on floor density display update.
+Evan Hsu: Worked on BU authentication, will work on integration with frontend team.
+Tilak Agarwal: Fixed css for profile page; will start working on sorting and search tab.
+Katie So: Updated the current figma design and the design brief; keep updating the design and communication with development teams.
+Scrum Evaluation: For this week's scrum, we met tgt as a team to discuss the data parsing and deployment. We accomplished most tasks we set for the day and made progress on both teams. The impediments we discovered this week is that our initial goals are unable to be implemented before the demo day. An impediment is resolved by resetting our goals and focus on our current working functionality.
+Mob-Programming: the evidence can be found in the drive Week 12 folder during the daily scrum.
+Test-Driven Development: heroku link alive, api json format the evidence can be found in Week 11 folder by screenshots.
+
+# Sprint Review 8
+For backend team we accomplish integration, deployment in order to prepare for our demo day product. Our frontend accomplished to update the app with the design. In general the development process is moving smoothly and we are progressing to deliver for demo day. For stakeholder, we invited a potential user we did survey on and updated him with our progress. We obtained some feedback on the design and updated the design.
+
+# Sprint Retrospective
+All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting. Improvements and feedbacks from the team: Need to do more checkins with mentors before the final demo; begin to set up meetings with them.
