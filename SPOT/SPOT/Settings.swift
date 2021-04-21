@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Settings: View {
+    @State var navigationBarBackButtonHidden = true
     var body: some View {
         
         NavigationView {
@@ -24,10 +25,9 @@ struct Settings: View {
                     .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:4, x:0, y:4)
                     Spacer()
                 }
-                Spacer()
                 NavigationLink(destination: LoginView()) {
                                 Text("ACCOUNT")
-                                    .foregroundColor(.red)
+                                    .foregroundColor(Color(#colorLiteral(red: 0.77, green: 0.09, blue: 0.14, alpha: 1)))
                                     .background(Color.white)
                                     .padding(.leading, 40)
                                     .cornerRadius(5)
@@ -48,10 +48,9 @@ struct Settings: View {
                                     .cornerRadius(5)
                                     
                 }.padding()
-                Spacer()
                 NavigationLink(destination: LoginView()) {
                                 Text("SUPPORT")
-                                    .foregroundColor(.red)
+                                    .foregroundColor(Color(#colorLiteral(red: 0.77, green: 0.09, blue: 0.14, alpha: 1)))
                                     .background(Color.white)
                                     .padding(.leading, 40)
                                     .cornerRadius(5)

@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var navigationBarBackButtonHidden = true
     var body: some View {
         TabView {
             Settings()
                 .tabItem {
-                    Image("Settings")
+                    Image(systemName: "gear")
                     Text("Settings")
                 }
             ListUIView(text: "")
-                        .tabItem {
-                            Image("Locations")
-                            Text("Locations")
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
                         }
             Favorites()
                 .tabItem {
-                    Image("Favorites")
+                    Image(systemName: "heart.fill")
                     Text("Favorites")
                 }
         }

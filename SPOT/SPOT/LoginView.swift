@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     var body: some View {
             NavigationView {
                 VStack{
@@ -24,9 +25,9 @@ struct LoginView: View {
                                     .font(.custom("Cabin Bold", size: 24))
                                     .padding()
                                     .foregroundColor(.white)
-                                    .background(Color.red)
-                                    .cornerRadius(5)
-                    }.frame(width: 150, height: 60)
+                                    .background(Color(#colorLiteral(red: 0.800000011920929, green: 0, blue: 0, alpha: 1)))
+                                    .cornerRadius(15)
+                    }.frame(width: 250, height: 60).navigationBarBackButtonHidden(true)
                     Spacer()
             }
         }
