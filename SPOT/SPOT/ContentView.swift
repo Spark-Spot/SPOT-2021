@@ -16,7 +16,7 @@ struct ContentView: View {
                     Image(systemName: "gear")
                     Text("Settings")
                 }
-            ListUIView(text: "")
+            ListUIView(text: "",rating: 4)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")

@@ -33,7 +33,7 @@ struct Settings: View {
                                     .cornerRadius(5)
                                     
                 }.padding()
-                NavigationLink(destination: LoginView()) {
+                NavigationLink(destination: EditProfile()) {
                                 Text("Edit Profile")
                                     .foregroundColor(.black)
                                     .background(Color.white)
@@ -55,7 +55,7 @@ struct Settings: View {
                                     .padding(.leading, 40)
                                     .cornerRadius(5)
                 }.padding()
-                NavigationLink(destination: LoginView()) {
+                NavigationLink(destination: About()) {
                                 Text("About")
                                     .foregroundColor(.black)
                                     .background(Color.white)
