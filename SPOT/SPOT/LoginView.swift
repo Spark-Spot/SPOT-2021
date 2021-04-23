@@ -8,25 +8,34 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     var body: some View {
-        VStack{
-            TextField("Email", text: .constant(""))
-                .frame(width: 360, height: 60)
-                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
-            TextField("Password", text: .constant(""))
-                .frame(width: 360, height: 60)
-                .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
             NavigationView {
-                NavigationLink(destination: ListUIView(text: "")) {
-                                Text("Login").fontWeight(.semibold)
-                                    .font(.title)
-                                    .padding()
-                                    .foregroundColor(.white)
-                                    .background(Color.red)
-                                    .cornerRadius(5)
-                }.frame(width: 150, height: 60)
-                
-            }.frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                HStack{
+                    
+                }
+                VStack{
+                    Spacer()
+                    TextField("Email", text: .constant(""))
+                        .frame(width: 360, height: 60)
+                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
+                    TextField("Password", text: .constant(""))
+                        .frame(width: 360, height: 60)
+                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
+                    Spacer()
+                    NavigationLink(destination: ContentView()) {
+                        Button("Login"){
+                            
+                        }
+                            .font(.custom("Cabin Bold", size: 20))
+                        .padding(.leading, 20).padding(.trailing, 20)
+                        .padding(.top, 5).padding(.bottom, 5)
+                            .foregroundColor(.white)
+                            .background(Color(#colorLiteral(red: 0.800000011920929, green: 0, blue: 0, alpha: 1)))
+                            .cornerRadius(10)
+                    }.navigationBarBackButtonHidden(true)
+                    Spacer()
+            }
         }
     }
 }
