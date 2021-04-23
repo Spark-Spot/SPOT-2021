@@ -16,10 +16,10 @@ struct Favorites: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack{
-                Text("My Favorites").font(.largeTitle).fontWeight(.bold).padding(.leading, 25).padding(.top,10)
+                Text("My Favorites").font(.largeTitle).fontWeight(.bold).padding(.leading, 25).padding(.top,30)
                 Image(systemName: "heart.fill")
                     .font(.system(size: 40)).foregroundColor(.red)
-                    .padding(.trailing,20).padding(.leading, 10).padding(.top, 3)
+                    .padding(.trailing,20).padding(.leading, 10).padding(.top, 30)
             }
             List(fetcher.favorites) { fave in
                 VStack{

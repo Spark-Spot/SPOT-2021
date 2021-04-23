@@ -11,6 +11,9 @@ struct LoginView: View {
     
     var body: some View {
             NavigationView {
+                HStack{
+                    
+                }
                 VStack{
                     Spacer()
                     TextField("Email", text: .constant(""))
