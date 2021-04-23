@@ -13,12 +13,25 @@ struct LoginView: View {
             NavigationView {
                 VStack{
                     Spacer()
-                    TextField("Email", text: .constant(""))
-                        .frame(width: 360, height: 60)
-                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
-                    TextField("Password", text: .constant(""))
-                        .frame(width: 360, height: 60)
-                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
+                    ZStack(){
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                            .frame(width: 371, height: 62)
+                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.15000000596046448)), radius:5, x:0, y:5)
+                        TextField("Email", text: .constant(""))
+                            .frame(width: 360, height: 60)
+                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
+                    }.padding(.bottom, 50)
+                    ZStack(){
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+                            .frame(width: 371, height: 62)
+                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.15000000596046448)), radius:5, x:0, y:5)
+                        TextField("Password", text: .constant(""))
+                            .frame(width: 360, height: 60)
+                            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25)), radius:5, x:0, y:5)
+                    }.padding(.bottom, 50)
+                    
                     Spacer()
                     NavigationLink(destination: ContentView()) {
                                 Text("Login")
