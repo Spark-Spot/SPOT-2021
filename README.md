@@ -267,3 +267,46 @@ For backend team we accomplish integration, deployment in order to prepare for o
 
 # Sprint Retrospective
 All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting. Improvements and feedbacks from the team: Need to do more checkins with mentors before the final demo; begin to set up meetings with them.
+
+
+# Sprint Planning 9: (G1-G3, G6 Wrap Up, demo day meetings and plannings)
+Backend:
+1. Tuning the date format with frontend floor density
+2. Deploy to Heroku through Github
+
+
+Frontend:
+1. Design update and usability tests (UXD).
+2. User Profile Edit Page, About Page, Login Page
+3. Implement Floor density expanding tab and sorting
+
+
+Rationale: We plan to mainly focus on finishing some other pages that relate to setting page and implement the new design for the floor density expanding tab. For backend, we continuously meet with frontend team to update our api format based on their need. Our frontend plan is to update the settings page sub pages and the listview page for the floor density expanding tab.
+
+# Daily Scrum (04/22)
+John Chai: Designed the setting page for about and edit login page; will keep working on merge conflict with branches that other developers worked on.
+
+Preksha Munot: Implement the design for the searching bar; will start working on favorites page update.
+
+Evan Hsu: Improved and adjusted the api callback to help the frontend team; will work on the BU authentication.
+
+Tilak Agarwal: Implemented css for the expanding floor view; will start working on adjusting json format.
+
+Katie So: Updated the current figma design and the design brief; keep updating the design and communication with development teams.
+
+
+Scrum Evaluation:
+For this week's scrum, we worked together as a whole team to finalize key component functionalities for demo day. We accomplished most tasks we set for the day and made progress on both teams. The impediments we discovered this week is that we couldn’t finish all the user stories we originally. An impediment is resolved by scheduling meetings with mentors to finalize deliberation of the finished user story.
+
+Mob-Programming: the evidence can be found in the drive Week 13 folder during the daily scrum.
+
+Test-Driven Development: api fix and update as well as front end deliberations. the evidence can be found in Week 13 folder by screenshots.
+
+
+# Sprint Review 9
+For backend team not much work except for adjusting api data and continues integration with Heroku. Our frontend accomplished to finalize the design on the setting page and floor expansion tab that was updated from last week’s design feedback. In general the development process is moving smoothly and each team accomplished what was set at the beginning of the week. For stakeholder, we introduced a former user we did survey on and updated her with our progress. We obtained some feedback on the design and updated the design.
+
+
+# Sprint Retrospective
+All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
+Improvements and feedbacks from the team: Meetings with mentors need to be scheduled and do more meetings before the demo day to checkin with mentors. There is no specific concern brought up this week.
