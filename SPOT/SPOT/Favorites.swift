@@ -32,7 +32,7 @@ struct Favorites: View {
                             Image("Mugar")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .clipShape(RoundedRectangle(cornerRadius: 10)).frame(width: 100, height: 72).padding(.trailing,50)
+                                .clipShape(RoundedRectangle(cornerRadius: 10)).frame(width: 100, height: 72).padding(.trailing,70).padding(.leading, 30)
                             VStack(alignment: .leading){
                                 Text(fave.name).font(.title3).fontWeight(.bold).padding(.bottom,2)
                                 Text(fave.address).padding(.bottom,5)

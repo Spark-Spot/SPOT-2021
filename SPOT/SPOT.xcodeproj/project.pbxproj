@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59498D97263B3AFC00BC9BA1 /* SendFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59498D96263B3AFC00BC9BA1 /* SendFeedback.swift */; };
 		59A94506263110B100B4604C /* ListViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A94505263110B100B4604C /* ListViewUI.swift */; };
 		59A9450A263110D400B4604C /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A94509263110D400B4604C /* Favorites.swift */; };
 		59A9450E2631156400B4604C /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9450D2631156400B4604C /* About.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59498D96263B3AFC00BC9BA1 /* SendFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedback.swift; sourceTree = "<group>"; };
 		59A94505263110B100B4604C /* ListViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewUI.swift; sourceTree = "<group>"; };
 		59A94509263110D400B4604C /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		59A9450D2631156400B4604C /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				9ED1C6AB25FF063200482C1A /* ContentView.swift */,
 				59A94511263115D300B4604C /* EditProfile.swift */,
 				59A9450D2631156400B4604C /* About.swift */,
+				59498D96263B3AFC00BC9BA1 /* SendFeedback.swift */,
 				59A9451A263216C900B4604C /* RatingView.swift */,
 				59A9451E263255CF00B4604C /* Launch Screen.storyboard */,
 				9ED1C6AD25FF063500482C1A /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59498D97263B3AFC00BC9BA1 /* SendFeedback.swift in Sources */,
 				9ED1C6AC25FF063200482C1A /* ContentView.swift in Sources */,
 				9ED1C6BD25FF066500482C1A /* LoginView.swift in Sources */,
 				59A9450E2631156400B4604C /* About.swift in Sources */,

@@ -6,7 +6,7 @@ struct About: View {
 //    @State var navigationBarBackButtonHidden = true
     var body: some View {
         VStack (alignment: .leading){
-            Text("About US").padding().padding(.leading,150).font(.custom("Cabin Bold", size: 20))
+            Text("About SPOT").padding().padding(.leading,130).font(.custom("Cabin Bold", size: 20))
             Divider()
             Text("Terms of Use").padding(5).padding(.leading,10)
             Divider()

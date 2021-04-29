@@ -68,7 +68,7 @@ struct Settings: View {
                                     .cornerRadius(5)
                 }.padding(5)
                 Divider()
-                NavigationLink(destination: LoginView()) {
+                NavigationLink(destination: SendFeedback()) {
                                 Text("Send Feedback")
                                     .foregroundColor(.black)
                                     .background(Color.white)
