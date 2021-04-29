@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var navigationBarBackButtonHidden = true
+    var navigationBarBackButtonHidden = true
+    
+    
     var body: some View {
             NavigationView {
                 VStack{
@@ -43,7 +45,7 @@ struct LoginView: View {
                     }.frame(width: 250, height: 60).navigationBarBackButtonHidden(true)
                     Spacer()
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

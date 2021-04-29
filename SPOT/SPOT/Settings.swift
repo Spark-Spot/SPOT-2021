@@ -17,7 +17,7 @@ struct Settings: View {
                     Spacer()
                     Text("My Settings").font(.custom("Cabin Bold", size: 30))
                     Spacer()
-                    Image("Mugar")
+                    Image("Mugar Library")
                         .resizable()
                         .frame(width: 78, height: 77)
                         .clipShape(RoundedRectangle(cornerRadius: 218))
@@ -146,7 +146,7 @@ struct Settings: View {
                 
                 Spacer()
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 

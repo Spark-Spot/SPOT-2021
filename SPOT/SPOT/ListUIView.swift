@@ -12,10 +12,12 @@ struct ListUIView: View {
     @ObservedObject var fetchers = InformationFetcher()
     @State var text = ""
     @State private var isEditing = false
+    @EnvironmentObject var makefavorites: MakeFavorite
     
     var body: some View {
         VStack{
             HStack{
+                Spacer()
                 TextField("", text:$text)
                     .padding(7)
                     .padding(.horizontal, 25)
@@ -39,7 +41,7 @@ struct ListUIView: View {
                                 }
                             }
                         })
-                Image(systemName: "arrow.left.arrow.right")
+                Image(systemName: "arrow.up.arrow.down")
                     .padding(.trailing, 10)
                     .onTapGesture {self.showingActionSheet = true}
                     .actionSheet(isPresented: $showingActionSheet) {
@@ -50,14 +52,15 @@ struct ListUIView: View {
                                             sortDensityRatio()
                                         },
                                         .default(Text("Density")) {
-                                            sortDensityCount()
+                                            sortDensityRatio()
                                         },
                                         .default(Text("Distance")) {
-                                            sortDensityCount()
+                                            sortDistance()
                                         },
                                         .cancel()
                                     ])
                     }
+                Spacer()
             }.padding(.bottom, 5)
             List(fetchers.info) { inf in
                 VStack{
@@ -76,6 +79,11 @@ struct ListUIView: View {
             $0.percent < $1.percent
         }
     }
+    func sortDistance(){
+        fetchers.info = fetchers.info.sorted{
+            $0.remaining_capacity < $1.remaining_capacity
+        }
+    }
 }
 
 struct CardView: View {
@@ -86,12 +94,14 @@ struct CardView: View {
     
     @State private var showDetail = false
     
+    @EnvironmentObject var makefavorites: MakeFavorite
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 11)
                 .fill(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
             VStack{
-                Image("Mugar")
+                Image(info.building_name)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 318, height: 184)
@@ -99,16 +109,20 @@ struct CardView: View {
                     .overlay(
                         ZStack {
                             Image(systemName: "heart.fill")
-                                .opacity(isPressedMugar ? 1 : 0)
-                                .scaleEffect(isPressedMugar ? 1.0 : 0.1)
+                                .opacity(makefavorites.contains(info) ? 1 : 0)
+                                .scaleEffect(makefavorites.contains(info) ? 1.0 : 0.1)
                                 .animation(.linear)
                             Image(systemName: "heart")
-                        }.font(.system(size: 40))
-                        . padding(.leading, 240)
-                        .padding(.bottom, 100)
+                        }.font(.system(size: 30))
+                        .padding(.leading, 260)
+                        .padding(.bottom, 120)
                         .onTapGesture {
-                            self.isPressedMugar.toggle()
-                        }.foregroundColor(isPressedMugar ? Color(#colorLiteral(red: 0.772549033164978, green: 0.0941176488995552, blue: 0.13725490868091583, alpha: 1)) : .white)
+                            if self.makefavorites.contains(self.info) {
+                                self.makefavorites.remove(self.info)
+                            } else {
+                                self.makefavorites.add(self.info)
+                            }
+                        }.foregroundColor(makefavorites.contains(info) ? Color(#colorLiteral(red: 0.772549033164978, green: 0.0941176488995552, blue: 0.13725490868091583, alpha: 1)) : .white)
                         
                     ).frame(width: 318, height: 184)
                     .padding()
@@ -117,7 +131,7 @@ struct CardView: View {
                         Text(info.building_name).font(.custom("Cabin Bold", size: 30))
                             .padding(.top,10)
                         Text(info.building_desc).font(.custom("Cabin Regular", size: 14))
-                        Text("Empty Spots: \(info.density_cnt) / \(info.capacity)").font(.custom("Cabin Regular", size: 14))
+                        Text("Empty Spots: \(info.capacity - info.density_cnt) / \(info.capacity)").font(.custom("Cabin Regular", size: 14))
                         Text("1.3 miles away").font(.custom("Cabin Regular", size: 14))
                         HStack{
                             Text("Rating:").font(.custom("Cabin Regular", size: 14))
@@ -128,7 +142,7 @@ struct CardView: View {
                     }
                     ZStack{
                         Circle()
-                            .trim(from: 0.05, to: 1)
+                            .trim(from: CGFloat(info.remaning_ratio), to: 1)
                             .stroke(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.772549033164978, green: 0.0941176488995552, blue: 0.13725490868091583, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading),style: StrokeStyle(lineWidth: 8, lineCap: .round))
                             .frame(width: 90, height: 90)
                             .rotationEffect(Angle(degrees: 90))
@@ -202,75 +216,30 @@ public class InformationFetcher: ObservableObject {
     
     @Published var info = [Information]()
     
-    let data1 = """
-        [
-            {
-                "id": "1",
-                "building_desc": "123 Commonwealth Ave",
-                "building_name": "Mugar Library",
-                "density_cnt": 400,
-                "capacity": 534,
-                "dc_ratio": 0.74,
-                "percent": 74,
-                "remaning_ratio": 0.26
-            },
-            {
-                "id": "2",
-                "building_desc": "1 Bay State Rd",
-                "building_name": "Yawkey Center",
-                "density_cnt": 150,
-                "capacity": 300,
-                "dc_ratio": 0.5,
-                "percent": 50,
-                "remaning_ratio": 0.5
-            },
-            {
-                "id": "3",
-                "building_desc": "33 Harry Agganis Way",
-                "building_name": "Student Village",
-                "density_cnt": 145,
-                "capacity": 150,
-                "dc_ratio": 0.95,
-                "percent": 95,
-                "remaning_ratio": 0.05
-            },
-            {
-                "id": "4",
-                "building_desc": "595 Commonwealth Ave",
-                "building_name": "Questrom",
-                "density_cnt": 450,
-                "capacity": 520,
-                "dc_ratio": 0.86,
-                "percent": 86,
-                "remaning_ratio": 0.14
-            }
-        ]
-        """.data(using: .utf8)!
-    
     init(){
         load()
     }
     
     func load() {
-        let url = URL(string: "https://raw.githubusercontent.com/prekshamunot/SPOT-2021/main/test2.json")!
+            let url = URL(string: "https://buspot.herokuapp.com/getbuildingsdensity")!
         
-        URLSession.shared.dataTask(with: url) {(data,response,error) in
-            do {
-                if let d = data {
-                    let decodedLists = try JSONDecoder().decode([Information].self, from: self.data1)
-                    DispatchQueue.main.async {
-                        self.info = decodedLists
+            URLSession.shared.dataTask(with: url) {(data,response,error) in
+                do {
+                    if let d = data {
+                        let decodedLists = try JSONDecoder().decode([Information].self, from: d)
+                        DispatchQueue.main.async {
+                            self.info = decodedLists
+                        }
+                    }else {
+                        print("No Data")
                     }
-                }else {
-                    print("No Data")
+                } catch {
+                    print ("Error")
                 }
-            } catch {
-                print ("Error")
-            }
-            
-        }.resume()
-        
-    }
+                
+            }.resume()
+             
+        }
 }
 
 
@@ -280,19 +249,30 @@ struct Information: Codable, Identifiable {
     public var building_name: String
     public var density_cnt: Int
     public var capacity: Int
-    public var dc_ratio: Float
+    public var remaining_capacity: Int
+    public var dc_ratio: Double
     public var percent: Int
-    public var remaning_ratio: Float
+    public var remaning_ratio: Double
+    public var floor_spots: spots
     
     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id = "building_code"
         case building_desc = "building_desc"
         case building_name = "building_name"
         case density_cnt = "density_cnt"
         case capacity = "capacity"
+        case remaining_capacity = "remaining_capacity"
         case dc_ratio = "dc_ratio"
         case percent = "percent"
-        case remaning_ratio = "remaning_ratio"
+        case remaning_ratio = "remaning_dc_ratio"
+        case floor_spots = "floors_remaining_seats"
+    }
+}
+
+struct spots: Codable {
+    public var floors: Int
+    enum CodingKeys: String, CodingKey{
+        case floors = "1"
     }
 }
 
@@ -301,5 +281,3 @@ struct ListUIView_Previews: PreviewProvider {
         ListUIView()
     }
 }
-
-

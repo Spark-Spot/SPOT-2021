@@ -48,7 +48,7 @@ public class FavoriteFetcher: ObservableObject {
     }
     
     func load() {
-        let url = URL(string: "https://raw.githubusercontent.com/prekshamunot/SPOT-2021/main/test.json")!
+        let url = URL(string: "https://raw.githubusercontent.com/prekshamunot/SPOT-2021/main/test2.json")!
     
         URLSession.shared.dataTask(with: url) {(data,response,error) in
             do {

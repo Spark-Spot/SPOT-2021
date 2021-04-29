@@ -10,6 +10,7 @@
 		9E041A5126331FE900821C49 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E041A5026331FE900821C49 /* EditView.swift */; };
 		9E041A5C26333A1D00821C49 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E041A5B26333A1D00821C49 /* Favorites.swift */; };
 		9E041A5F26333A3200821C49 /* ListUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E041A5E26333A3200821C49 /* ListUIView.swift */; };
+		9E91E460263A474300BF7AC7 /* MakeFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E91E45F263A474300BF7AC7 /* MakeFavorite.swift */; };
 		9ED1C6AA25FF063200482C1A /* SPOTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1C6A925FF063200482C1A /* SPOTApp.swift */; };
 		9ED1C6AC25FF063200482C1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1C6AB25FF063200482C1A /* ContentView.swift */; };
 		9ED1C6AE25FF063500482C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ED1C6AD25FF063500482C1A /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		9E041A5026331FE900821C49 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		9E041A5B26333A1D00821C49 /* Favorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		9E041A5E26333A3200821C49 /* ListUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUIView.swift; sourceTree = "<group>"; };
+		9E91E45F263A474300BF7AC7 /* MakeFavorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeFavorite.swift; sourceTree = "<group>"; };
 		9ED1C6A625FF063200482C1A /* SPOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ED1C6A925FF063200482C1A /* SPOTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPOTApp.swift; sourceTree = "<group>"; };
 		9ED1C6AB25FF063200482C1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				9ED1C6A925FF063200482C1A /* SPOTApp.swift */,
 				9ED1C6AB25FF063200482C1A /* ContentView.swift */,
 				9E041A5B26333A1D00821C49 /* Favorites.swift */,
+				9E91E45F263A474300BF7AC7 /* MakeFavorite.swift */,
 				9ED1C6AD25FF063500482C1A /* Assets.xcassets */,
 				9ED1C6B225FF063500482C1A /* Info.plist */,
 				9ED1C6AF25FF063500482C1A /* Preview Content */,
@@ -156,6 +159,7 @@
 				9E041A5126331FE900821C49 /* EditView.swift in Sources */,
 				9E041A5F26333A3200821C49 /* ListUIView.swift in Sources */,
 				9ED1C6AC25FF063200482C1A /* ContentView.swift in Sources */,
+				9E91E460263A474300BF7AC7 /* MakeFavorite.swift in Sources */,
 				9ED1C6BD25FF066500482C1A /* LoginView.swift in Sources */,
 				9E041A5C26333A1D00821C49 /* Favorites.swift in Sources */,
 				9ED1C6AA25FF063200482C1A /* SPOTApp.swift in Sources */,
