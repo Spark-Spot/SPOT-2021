@@ -310,3 +310,30 @@ For backend team not much work except for adjusting api data and continues integ
 # Sprint Retrospective
 All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting.
 Improvements and feedbacks from the team: Meetings with mentors need to be scheduled and do more meetings before the demo day to checkin with mentors. There is no specific concern brought up this week.
+
+# Sprint Planning 10: (G1-G3 wrap up — final checking in with mentors and design fix )
+Backend:
+1. Adapt api calls to finalize with frontend.
+Frontend:
+1. Design update and usability tests (UXD).
+2. Listview padding fix
+3. Merge conflicts resolved
+4. Favorites page design update and implementation
+Rationale: We plan to mainly focus on finishing everything for G1-G3 full functionality before the demo day and also checkin with our mentors for final judging. We plan to merge all conflicts for frontend with the update design.
+
+# Daily Scrum (04/27)
+John Chai: helped on designing and writing sub pages for settings page, will meet with mentor for final check ins.
+Preksha Munot: updated the favorites page and resolved merge conflicts for other frontend developers; will start working on finalizing app launching page.
+Evan Hsu: Worked on changing the api return format, will meet mentor to finalize everything.
+Tilak Agarwal: Implemented css for the pie chart percentage and sorting tab density; will start working on finalizing merge conflicts with Preksha.
+Katie So: Updated the current figma design and the design brief; keep updating the design and communication with development teams.
+
+Scrum Evaluation: For this week's scrum, we meet tgt to finalize and discuss the design update the frontend. The impediments we discovered this week is that have lots of merge conflicts. An impediment is resolved by resolving them more frequently.
+Mob-Programming: the evidence can be found in the drive Week 12 folder during the daily scrum.
+Test-Driven Development: api fix and of the spot presentation demo. the evidence can be found in Week 12 folder by screenshots.
+
+# Sprint Review 10
+For backend team we changed the api return json format. Our frontend resolved all merge conflicts and make sure the app is functional. In general we are able to finalizing everything for the demo day while getting feedback from our mentor for future development. For stakeholder, we introduced a former user we did survey on and updated her with our product and obtained some feedback future features.
+
+# Sprint Retrospective
+All teammates participated in the sprint review and discussed plans as a team in the weekly sprint planning and review meeting. Improvements and feedbacks from the team: we finalized everything and very happy with our working product.
