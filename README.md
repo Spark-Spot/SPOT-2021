@@ -329,8 +329,8 @@ Tilak Agarwal: Implemented css for the pie chart percentage and sorting tab dens
 Katie So: Updated the current figma design and the design brief; keep updating the design and communication with development teams.
 
 Scrum Evaluation: For this week's scrum, we meet tgt to finalize and discuss the design update the frontend. The impediments we discovered this week is that have lots of merge conflicts. An impediment is resolved by resolving them more frequently.
-Mob-Programming: the evidence can be found in the drive Week 12 folder during the daily scrum.
-Test-Driven Development: api fix and of the spot presentation demo. the evidence can be found in Week 12 folder by screenshots.
+Mob-Programming: the evidence can be found in the drive Week 14 folder during the daily scrum.
+Test-Driven Development: api fix and of the spot presentation demo. the evidence can be found in Week 14 folder by screenshots.
 
 # Sprint Review 10
 For backend team we changed the api return json format. Our frontend resolved all merge conflicts and make sure the app is functional. In general we are able to finalizing everything for the demo day while getting feedback from our mentor for future development. For stakeholder, we introduced a former user we did survey on and updated her with our product and obtained some feedback future features.
